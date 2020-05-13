@@ -14,6 +14,7 @@ public class Main {
 		System.out.println("1) Ensino Fundamental");
 		System.out.println("2) Ensino Médio");
 		System.out.println("3) Ensino Superior");
+		System.out.println("4) Pós-graduação");
 		System.out.println("Digite uma opção: ");
 		escolaridade = sc.nextInt();
 		
