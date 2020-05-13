@@ -7,7 +7,7 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		int escolaridade, experiencia;
+		int escolaridade, experiencia, ptsescola=0, ptsexp=0;
 		char viajar, motorista;
 		
 		System.out.println("Qual sua escolaridade?");
@@ -17,13 +17,43 @@ public class Main {
 		System.out.println("4) Pós-graduação");
 		System.out.println("Digite uma opção: ");
 		escolaridade = sc.nextInt();
-		System.out.println("");
 		System.out.println("Você tem quantos anos de experiência profissional?");
 		experiencia = sc.nextInt();
 		System.out.println("Você tem disponibilidade para viajar (S/N)?");
 		viajar = sc.next().charAt(0);
 		System.out.println("Você tem habilitação de motorista (S/N)?");
 		motorista = sc.next().charAt(0);
+		
+		if (escolaridade == 1) {
+			ptsescola = 10;
+		}
+		else if (escolaridade == 2) {
+			ptsescola = 20;
+		}
+		else if (escolaridade == 3) {
+			ptsescola = 30;
+		}
+		else {
+			ptsescola = 40;
+		}
+		
+		
+		if (experiencia == 0) {
+			ptsexp = 0;
+		}
+		else if (experiencia < 2) {
+			ptsexp = 10;
+		}
+		else if (experiencia > 2 && experiencia < 5 ) {
+			ptsexp = 20;
+		}
+		else {
+			ptsexp = 40;
+		}
+		
+		System.out.println("");
+		System.out.println("Pontos por escolaridade: " + ptsescola);
+		System.out.println("Pontos por experiência: " + ptsexp);
 		
 		sc.close();
 	}
