@@ -54,6 +54,23 @@ public class Main {
 		System.out.println("");
 		System.out.println("Pontos por escolaridade: " + ptsescola);
 		System.out.println("Pontos por experiência: " + ptsexp);
+		System.out.println("");
+		
+		if (escolaridade < 2) {
+			System.out.println("Infelizmente seu perfil não atende a empresa");
+		}
+		else {
+			System.out.println("Você está habilitado para o(s) seguinte(s) cargo(s): ");
+			if ((escolaridade >= 2) && (Character.toLowerCase(motorista) == 's')) {
+				System.out.println("ASSISTENTE");
+			}
+			else if ((escolaridade >= 3) && (experiencia > 2)) {
+				System.out.println("GERENTE");
+			}
+			if ((experiencia >= 5) && (escolaridade >= 3) && (Character.toLowerCase(viajar) == 's')) {
+				System.out.println("ANALISTA");
+			}
+		}
 		
 		sc.close();
 	}
