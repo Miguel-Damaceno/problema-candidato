@@ -17,6 +17,13 @@ public class Main {
 		System.out.println("4) Pós-graduação");
 		System.out.println("Digite uma opção: ");
 		escolaridade = sc.nextInt();
+		System.out.println("");
+		System.out.println("Você tem quantos anos de experiência profissional?");
+		experiencia = sc.nextInt();
+		System.out.println("Você tem disponibilidade para viajar (S/N)?");
+		viajar = sc.next().charAt(0);
+		System.out.println("Você tem habilitação de motorista (S/N)?");
+		motorista = sc.next().charAt(0);
 		
 		sc.close();
 	}
